@@ -1,5 +1,5 @@
 
-    <script>
+ 
         // ===== DATA & VARIABEL GLOBAL =====
         let transactions = [];
         let transactionIdCounter = 1;
@@ -385,7 +385,23 @@
         });
 
         // ===== INISIALISASI =====
-        
+        const promoCodes = {
+    "DISKON10": {
+        type: "percentage",     // diskon persentase
+        discount: 10,           // 10% potongan
+        description: "Potongan 10% untuk semua produk"
+    },
+    "HEMAT50K": {
+        type: "fixed",          // diskon tetap
+        discount: 50000,        // potongan Rp 50.000
+        description: "Diskon tetap sebesar Rp 50.000"
+    },
+    "STUDENT20": {
+        type: "percentage",
+        discount: 20,
+        description: "Diskon 20% khusus pelajar"
+    }
+};
         // Initialize app
         function initApp() {
             updateTotal();
@@ -397,6 +413,3 @@
 
         // Jalankan saat DOM siap
         document.addEventListener('DOMContentLoaded', initApp);
-    </script>
-</body>
-</html>
